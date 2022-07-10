@@ -111,8 +111,11 @@ public class App
         }).collect(Collectors.toList());
         collect.forEach(System.out::println);*/
 
-        StreamApiPractice streamApiPractice = new StreamApiPractice();
-        streamApiPractice.go();
+        //StreamApiPractice streamApiPractice = new StreamApiPractice();
+        //streamApiPractice.go();
+
+        OptionalPractice optionalPractice = new OptionalPractice();
+        optionalPractice.go();
 
     }
 
