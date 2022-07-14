@@ -114,8 +114,11 @@ public class App
         //StreamApiPractice streamApiPractice = new StreamApiPractice();
         //streamApiPractice.go();
 
-        OptionalPractice optionalPractice = new OptionalPractice();
-        optionalPractice.go();
+        //OptionalPractice optionalPractice = new OptionalPractice();
+        //optionalPractice.go();
+
+        DatePractice datePractice = new DatePractice();
+        datePractice.go();
 
     }
 
