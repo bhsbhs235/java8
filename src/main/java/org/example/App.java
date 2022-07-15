@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.*;
+import java.util.concurrent.ExecutionException;
 import java.util.function.*;
 import java.util.stream.Collectors;
 
@@ -10,8 +11,7 @@ import java.util.stream.Collectors;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws ExecutionException, InterruptedException {
         /*int baseNumber = 10;
         RunSomething runSomething = (number) -> {
             return number + baseNumber;
@@ -117,9 +117,19 @@ public class App
         //OptionalPractice optionalPractice = new OptionalPractice();
         //optionalPractice.go();
 
-        DatePractice datePractice = new DatePractice();
-        datePractice.go();
+        /*DatePractice datePractice = new DatePractice();
+        datePractice.go();*/
 
+        /*ThreadPractice threadPractice = new ThreadPractice();
+        try {
+            threadPractice.go();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }*/
+        CompletableFuturePractice com = new CompletableFuturePractice();
+        com.go();
     }
 
     /*
