@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
  * Hello world!
  *
  */
+@Hyoseong("aaa")
+@Hyoseong("bbb")
 public class App 
 {
     public static void main( String[] args ) throws ExecutionException, InterruptedException {
@@ -128,8 +130,18 @@ public class App
         } catch (ExecutionException e) {
             e.printStackTrace();
         }*/
-        CompletableFuturePractice com = new CompletableFuturePractice();
-        com.go();
+        /*CompletableFuturePractice com = new CompletableFuturePractice();
+        com.go();*/
+
+        /*Hyoseong[] hyoseongs = App.class.getAnnotationsByType(Hyoseong.class);
+        Arrays.stream(hyoseongs).forEach(c -> {
+            System.out.println(c.value());
+        });*/
+
+        HyoseongContainer annotation = App.class.getAnnotation(HyoseongContainer.class);
+        Arrays.stream(annotation.value()).forEach(c -> {
+            System.out.println(c.value());
+        });
     }
 
     /*
@@ -160,5 +172,13 @@ public class App
             printInt.accept(10);
 
         }
+    }*/
+
+    /*static class abcd<@Hyoseong T> {
+
+        public static <@Hyoseong*//* Type_parameter *//* C> void print(@Hyoseong *//* type *//* C c){
+            System.out.println(c);
+        }
+
     }*/
 }
